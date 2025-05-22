@@ -13,7 +13,6 @@ urls = [
     'https://cf-ip.cdtools.click/beijing',
     'https://cf-ip.cdtools.click/shanghai',
     'https://cf-ip.cdtools.click/shenzhen',
-    'https://cf.090227.xyz',
     'https://monitor.gacjie.cn/page/cloudflare/ipv4.html'
 ]
 
