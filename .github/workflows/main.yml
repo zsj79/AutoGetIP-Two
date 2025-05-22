@@ -27,7 +27,7 @@ jobs:
         pip install cloudscraper
         
     - name: Run script
-      run: python ${{ github.workspace }}/collect_ips.py
+      run: python collect_ips.py
         
     - name: Commit and push changes
       run: |
