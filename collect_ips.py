@@ -6,15 +6,20 @@ from urllib.parse import urlparse
 
 # 目标URL列表
 urls = [
-    'https://cf-ip.cdtools.click/chengdu',
     'https://ip.164746.xyz',
+    'https://cf-ip.cdtools.click/chengdu',
+    'https://cf-ip.cdtools.click/beijing',
+    'https://cf-ip.cdtools.click/shanghai',
+    'https://cf-ip.cdtools.click/shenzhen',
+    'https://api.uouin.com/cloudflare.html',
     'https://monitor.gacjie.cn/page/cloudflare/ipv4.html'
 ]
 
 # 配置字典：域名 -> 对应的选择器
 site_config = {
-    'cf-ip.cdtools.click': {'selector': 'tr'},
     'ip.164746.xyz': {'selector': 'tr'},
+    'cf-ip.cdtools.click': {'selector': 'tr'},
+    'api.uouin.com': {'selector': 'div'},
     'monitor.gacjie.cn': {'selector': 'tr'}
 }
 
