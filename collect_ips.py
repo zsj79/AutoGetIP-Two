@@ -6,21 +6,21 @@ from urllib.parse import urlparse
 
 # 目标URL列表
 urls = [
+    'https://api.uouin.com/cloudflare.html',
+    'https://www.wetest.vip/page/cloudflare/address_v4.html',
     'https://ip.164746.xyz',
     'https://cf-ip.cdtools.click/chengdu',
     'https://cf-ip.cdtools.click/beijing',
     'https://cf-ip.cdtools.click/shanghai',
     'https://cf-ip.cdtools.click/shenzhen',
-    'https://api.uouin.com/cloudflare.html',
+    'https://cf.090227.xyz',
     'https://monitor.gacjie.cn/page/cloudflare/ipv4.html'
 ]
 
 # 配置字典：域名 -> 对应的选择器
 site_config = {
-    'ip.164746.xyz': {'selector': 'tr'},
-    'cf-ip.cdtools.click': {'selector': 'tr'},
-    'api.uouin.com': {'selector': 'div'},
-    'monitor.gacjie.cn': {'selector': 'tr'}
+    #'ip.164746.xyz': {'selector': 'tr'},
+    #'monitor.gacjie.cn': {'selector': 'tr'}
 }
 
 # 正则表达式用于匹配IP地址
@@ -42,7 +42,7 @@ with open('autoip.txt', 'w') as file:
             
             soup = BeautifulSoup(response.text, 'html.parser')
             domain = urlparse(url).netloc  # 获取域名
-            selector = site_config.get(domain, {}).get('selector', 'li')  # 默认li
+            selector = site_config.get(domain, {}).get('selector', 'tr')  # 默认tr
             
             elements = soup.find_all(selector)
             ips = []
