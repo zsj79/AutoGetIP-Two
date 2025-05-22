@@ -1,4 +1,4 @@
-name: Update IP List
+name: Update-Two IP List
 
 on:
   schedule:
@@ -31,7 +31,7 @@ jobs:
         
     - name: Commit and push changes
       run: |
-        git config --global user.email "lzsj79611@hotmail.com"
+        git config --global user.email "lzsj79611@hotmail.com“
         git config --global user.name "AutoGetIP-Two"
         if [ -n "$(git status --porcelain)" ]; then
           git add autoip.txt
