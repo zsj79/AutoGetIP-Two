@@ -27,11 +27,11 @@ jobs:
         pip install cloudscraper
         
     - name: Run script
-      run: python collect_ips.py
+      run: python ${{ github.workspace }}/collect_ips.py
         
     - name: Commit and push changes
       run: |
-        git config --global user.email "lzsj79611@hotmail.com“
+        git config --global user.email "lzsj79611@hotmail.com"
         git config --global user.name "AutoGetIP-Two"
         if [ -n "$(git status --porcelain)" ]; then
           git add autoip.txt
