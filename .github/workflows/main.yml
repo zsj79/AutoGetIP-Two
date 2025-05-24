@@ -31,8 +31,8 @@ jobs:
         
     - name: Commit and push changes
       run: |
-        git config --global user.email "lzsj79611@hotmail.com"
-        git config --global user.name "AutoGetIP-Two"
+        git config --global user.email "4846247@qq.com"
+        git config --global user.name "AutoGetIP"
         if [ -n "$(git status --porcelain)" ]; then
           git add autoip.txt
           git commit -m "Automatic update"
