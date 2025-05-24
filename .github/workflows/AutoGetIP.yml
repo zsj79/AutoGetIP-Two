@@ -1,4 +1,4 @@
-name: AutoGetIP List
+name: AutoGetIP
 
 on:
   schedule:
