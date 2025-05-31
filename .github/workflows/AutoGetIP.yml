@@ -2,7 +2,8 @@ name: AutoGetIP
 
 on:
   schedule:
-  - cron: '0 */3 * * *' # 每3小时运行一次
+  - cron: '0 16 * * *'  # UTC 时间 16:00 对应北京时间 00:00
+  timezone: 'Asia/Shanghai'
   workflow_dispatch: # 允许手动触发
   push: # 允许提交触发
 
